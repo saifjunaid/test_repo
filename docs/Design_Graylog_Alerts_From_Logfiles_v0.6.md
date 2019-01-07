@@ -85,7 +85,6 @@ Contents
 
 Figures
 =======
-
 [**Figure 1: High level Logfile Processing**
 6](#Figure-1:-High-level-Logfile-Processing)
 
