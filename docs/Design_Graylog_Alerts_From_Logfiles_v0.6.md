@@ -7,15 +7,14 @@ Design Document
 
 Revision History
 ----------------
-
-  **Version**   **Date**        **Author**      **Reviewer**        **Comments**
-  ------------- --------------- --------------- ------------------- --------------------------------------------------------------------
-  0.1           December 2018   Anand S Katti   Prathap Thammanna   Initial Release
-  0.2           December 2018   Anand S Katti   Prathap Thammanna   Updates to input types and diagrams
-  0.3           December 2018   Anand S Katti   Prathap Thammanna   Added collector sidecar details and updated diagrams
-  0.4           December 2018   Anand S Katti   Prathap Thammanna   Updated pipeline details and graylog local instance configuration.
-  0.5           December 2018   Anand S Katti   Prathap Thammanna   Removed duplicate sections
-  0.6           December 2018   Anand S Katti   Prathap Thammanna   Updated correct message processing order for pipeline and streams
+| Version 	| Date          	| Author        	| Reviewer          	| Comments                                                          	|
+|---------	|---------------	|---------------	|-------------------	|-------------------------------------------------------------------	|
+| 0.1     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Initial Release                                                   	|
+| 0.2     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updates to input types and diagrams                               	|
+| 0.3     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Added collector sidecar details and updated diagrams              	|
+| 0.4     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updated pipeline details and graylog local instance configuration 	|
+| 0.5     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Removed duplicate sections                                        	|
+| 0.6     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updated correct message processing order for pipeline and streams 	|
 
 > © 2018 by RadiSys Corporation. All rights reserved.
 >
