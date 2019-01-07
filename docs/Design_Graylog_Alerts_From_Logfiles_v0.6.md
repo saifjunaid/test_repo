@@ -86,7 +86,7 @@ Contents
 Figures
 =======
 [**Figure 1: High level Logfile Processing**
-6](#Figure-1:-High-level-Logfile-Processing)
+6](#Xcbb8dd3dcb8b8f912b1b89de5551cca00583f49)
 
 [**Figure 2: Detailed log flow in graylog**
 7](#Xc69978e2e0be8b4143735e08adbbc66ce40214b)
