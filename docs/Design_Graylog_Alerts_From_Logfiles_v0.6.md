@@ -1,4 +1,4 @@
-![](./media/rId20.png){width="5.833333333333333in"
+![](.//media/rId20.png){width="5.833333333333333in"
 height="0.6096281714785652in"}
 
 **Graylog Alerts from Logfiles**
@@ -8,15 +8,14 @@ Design Document
 Revision History
 ----------------
 
-| Version 	| Date          	| Author        	| Reviewer          	| Comments                                                          	|
-|---------	|---------------	|---------------	|-------------------	|-------------------------------------------------------------------	|
-| 0.1     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Initial Release                                                   	|
-| 0.2     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updates to input types and diagrams                               	|
-| 0.3     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Added collector sidecar details and updated diagrams              	|
-| 0.4     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updated pipeline details and graylog local instance configuration 	|
-| 0.5     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Removed duplicate sections                                        	|
-| 0.6     	| December 2018 	| Anand S Katti 	| Prathap Thammanna 	| Updated correct message processing order for pipeline and streams 	|
-
+  **Version**   **Date**        **Author**      **Reviewer**        **Comments**
+  ------------- --------------- --------------- ------------------- --------------------------------------------------------------------
+  0.1           December 2018   Anand S Katti   Prathap Thammanna   Initial Release
+  0.2           December 2018   Anand S Katti   Prathap Thammanna   Updates to input types and diagrams
+  0.3           December 2018   Anand S Katti   Prathap Thammanna   Added collector sidecar details and updated diagrams
+  0.4           December 2018   Anand S Katti   Prathap Thammanna   Updated pipeline details and graylog local instance configuration.
+  0.5           December 2018   Anand S Katti   Prathap Thammanna   Removed duplicate sections
+  0.6           December 2018   Anand S Katti   Prathap Thammanna   Updated correct message processing order for pipeline and streams
 
 > © 2018 by RadiSys Corporation. All rights reserved.
 >
@@ -142,7 +141,7 @@ details to the received messages.
 Following diagram shows the flow of logfile entries across the graylog
 nodes
 
-![](./media/rId29.png){width="5.833333333333333in"
+![](.//media/rId29.png){width="5.833333333333333in"
 height="3.103980752405949in"}
 
 []{#Xcbb8dd3dcb8b8f912b1b89de5551cca00583f49 .anchor}**Figure** **1:
@@ -187,7 +186,7 @@ and generate alerts.
 Following diagram shows the detailed design for graylog configuration
 and logfiles processing
 
-![](./media/rId32.png){width="5.833333333333333in"
+![](.//media/rId32.png){width="5.833333333333333in"
 height="3.259536307961505in"}
 
 []{#Xc69978e2e0be8b4143735e08adbbc66ce40214b .anchor}**Figure** **2:
@@ -400,7 +399,7 @@ containers are given static IP addresses in the same subnet
 The following **Figure 3: Container Networking**, shows the containers
 inter networking along with the IP Address of the containers.
 
-![](./media/rId46.png){width="5.833333333333333in"
+![](.//media/rId46.png){width="5.833333333333333in"
 height="3.1746292650918635in"}
 
 []{#X47ca25d5057fa79fadc09b7028e9790d068cf47 .anchor}**Figure** **3:
@@ -968,3 +967,4 @@ graylog server, this package needs to be installed.
     in the graylog local instance
 
 -   Under the URI: <http://GRAYLOG_LOCAL_IP:9080/system/collectors>
+
