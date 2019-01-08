@@ -2,7 +2,7 @@
 
 **A4 EMS POD Components Docker Container Installation Guide **
 
-Revision History {#revision-history }
+Revision History 
 ----------------
 
 | Version 	| Date          	| Author        	| Reviewer          	| Comments                                                          	|
@@ -22,7 +22,7 @@ Revision History {#revision-history }
 > Corporation. All other trademarks, registered trademarks, service
 > marks, and trade names are the property of their respective owners.
 
-**Contents** {#contents }
+**Contents** 
 ========
 
 [Revision History 2](#revision-history)
@@ -155,7 +155,7 @@ Revision History {#revision-history }
 
 [Figure 2: Docker Container Booting Order 9](#_Toc534058040)
 
-**Tables** {#tables .TOCHeading}
+**Tables** 
 ======
 
 [Table 1: Microservices Container Versions 5](#_Toc534058041)
@@ -170,7 +170,7 @@ Revision History {#revision-history }
 
 [Table 6: Container Volume Mounts 8](#_Toc534058046)
 
-Preface {#preface .Title}
+Preface 
 =======
 
 Objective
@@ -217,7 +217,7 @@ Table 2: Host Machine System details
 	| 2     	| Docker           	| 18.09.0, build 4d60db4         	|
 	| 3     	| Docker-compose   	| version 1.23.1, build b02f1306 	|
 
-Container Names {#container-names .Title}
+Container Names 
 ===============
 
 Following are the container names of the micro services.
@@ -251,7 +251,7 @@ containers are given static IP addresses in the same subnet
 The following Figure 1: Container Networking shows the containers inter
 networking along with the IP Address of the containers.
 
-[]{#_Ref531633407 .anchor}Figure 1: Container Networking
+Figure 1: Container Networking
 
 ![](./media/image2.png)
 
@@ -266,16 +266,16 @@ The mapping is described in the following table.
 
 Table 4: Container to Host Ports Mapping
 
-| Container Name                           	| Container Port 	| Host Port 	|
-|------------------------------------------	|----------------	|-----------	|
-| prometheus                               	| 9090           	| 9090      	|
-| alertmanager                             	| 9093           	| 9093      	|
-| rtb-prometheus-graylog (Graylog Webhook) 	| 8080           	| 9099      	|
-| olt-control                              	| 9001           	| 9001      	|
-| server control                           	| 9002           	| 9002      	|
-| graylog                                  	| 9000           	| 9000      	|
-| elasticsearch                            	| 9200           	| 9200      	|
-| mongo                                    	| 27017          	| ***-***   	|
+	| Container Name                           	| Container Port 	| Host Port 	|
+	|------------------------------------------	|----------------	|-----------	|
+	| prometheus                               	| 9090           	| 9090      	|
+	| alertmanager                             	| 9093           	| 9093      	|
+	| rtb-prometheus-graylog (Graylog Webhook) 	| 8080           	| 9099      	|
+	| olt-control                              	| 9001           	| 9001      	|
+	| server control                           	| 9002           	| 9002      	|
+	| graylog                                  	| 9000           	| 9000      	|
+	| elasticsearch                            	| 9200           	| 9200      	|
+	| mongo                                    	| 27017          	| ***-***   	|
 
 Bindmount - Configuration files and Folders
 ===========================================
@@ -350,11 +350,11 @@ order.
 
 Following block diagram shows the container booting order.
 
-[]{#_Toc534058040 .anchor}Figure 2: Docker Container Booting Order
+Figure 2: Docker Container Booting Order
 
 ![](./media/image3.png)
 
-Build/Launch the Containers {#buildlaunch-the-containers .Title}
+Build/Launch the Containers 
 ===========================
 
 Manage Docker as non-root user
@@ -904,7 +904,7 @@ containers are launched, to create GELF HTTP input in the graylog server
 This script waits till the graylog rest interface up, only then it posts
 request to create the GELF HTTP input.
 
-Commonly Used Commands {#commonly-used-commands .Title}
+Commonly Used Commands 
 ======================
 
 Following are some of the commonly performed operations on the
@@ -957,7 +957,7 @@ Check volume details
 
 \$ docker volume inspect \<volume name\>
 
- {#section .AppendixTitle}
+ 
 
 Sample Docker compose file defining image and configuration details for
 containers -- Olt Control, Server Control, Prometheus, Alertmanager,
@@ -972,7 +972,7 @@ launched.
 Same restart policy of "unless stopped" is used for all other
 containers.
 
-Sample docker-compose.yml file  {#sample-docker-compose.yml-file .AppendixHeading1}
+Sample docker-compose.yml file  
 ===============================
 
 version: \'3.5\'
@@ -1305,9 +1305,9 @@ external: false
 
 name: prometheus\_data
 
- {#section-1 .AppendixTitle}
+ 
 
-Webhook Dockerfile {#webhook-dockerfile .AppendixHeading1}
+Webhook Dockerfile 
 ==================
 
 'rtb-prometheus-graylog' is the graylog webhook developed by RTB.
@@ -1338,7 +1338,7 @@ USER node
 
 CMD \[\"npm\", \"start\"\]
 
-Olt Controller Dockerfile {#olt-controller-dockerfile .AppendixHeading1}
+Olt Controller Dockerfile 
 =========================
 
 Olt Control is the OLT metric exporter developed by Radisys.
@@ -1407,7 +1407,7 @@ USER pod
 
 ENTRYPOINT \[\"/bin/bash\", \"./run.sh\"\]
 
-run.sh startup script for Olt Controller container {#run.sh-startup-script-for-olt-controller-container .AppendixHeading2}
+run.sh startup script for Olt Controller container 
 --------------------------------------------------
 
 \#!/bin/bash
@@ -1432,7 +1432,7 @@ fi
 
 ./start\_device\_exporter.sh
 
-Server Controller Dockerfile {#server-controller-dockerfile .AppendixHeading2}
+Server Controller Dockerfile 
 ----------------------------
 
 \#Base image python:3
@@ -1491,7 +1491,7 @@ USER pod
 
 CMD \[\"../docker-run.sh\"\]
 
-### Docker-run.sh startup script for Server Controller  {#docker-run.sh-startup-script-for-server-controller .AppendixHeading3}
+### Docker-run.sh startup script for Server Controller  
 
 \#!/bin/bash
 
@@ -1519,9 +1519,8 @@ fi
 
 python3 -u prometheus\_exporter.py -L /var/log/a4
 
- {#section-2 .AppendixTitle}
 
-POD-Config repo  {#pod-config-repo .AppendixHeading1}
+POD-Config repo  
 ================
 
 Folder names ending with **"--config"** are config directories for each
