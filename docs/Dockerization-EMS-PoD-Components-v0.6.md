@@ -183,37 +183,21 @@ collection. The services are realized through open source components and
 components developed as part of EMS sprints. The details are captured in
 the following table.
 
-[]{#_Toc534058041 .anchor}Table 1: Microservices Container Versions
+Table 1: Microservices Container Versions
 
-+-----------------+-----------------+-----------------+-----------------+
-| **S.NO**        | **Microservices | **Type**        | **Version**     |
-|                 | **              |                 |                 |
-+=================+=================+=================+=================+
-| 1               | Prometheus      | Open Source     | 2.5.0           |
-+-----------------+-----------------+-----------------+-----------------+
-| 2               | Alertmanager    | Open Source     | 0.15.3          |
-+-----------------+-----------------+-----------------+-----------------+
-| 3               | rtb-prometheus- | Developed in    | 0.1.1           |
-|                 | graylog         | EMS sprints     |                 |
-|                 |                 |                 |                 |
-|                 | (Graylog        |                 |                 |
-|                 | Webhook)        |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 4               | Olt-control     | Developed in    | 0.3             |
-|                 | (OLT Metric     | EMS sprints     |                 |
-|                 | Exporter)       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 5               | Server          | Developed in    | 0.2             |
-|                 | control(Server  | EMS sprints     |                 |
-|                 | Metric          |                 |                 |
-|                 | Exporter)       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 6               | Graylog         | Open Source     | 2.4             |
-+-----------------+-----------------+-----------------+-----------------+
-| 7               | Elasticsearch   | Open Source     | 5.6.12          |
-+-----------------+-----------------+-----------------+-----------------+
-| 8               | Mongo DB        | Open Source     | 3               |
-+-----------------+-----------------+-----------------+-----------------+
+\begin{table}[]
+\begin{tabular}{llll}
+S.NO & Microservices                                                                            & Type                                                               & Version \\
+1    & Prometheus                                                                               & Open Source                                                        & 2.5.0   \\
+2    & Alertmanager                                                                             & Open Source                                                        & 0.15.3  \\
+3    & \begin{tabular}[c]{@{}l@{}}rtb-prometheus-\\ graylog\\ \\ (Graylog Webhook)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Developed in\\ EMS sprints\end{tabular} & 0.1.1   \\
+4    & \begin{tabular}[c]{@{}l@{}}Olt-control\\ (OLT Metric\\ \\ Exporter)\end{tabular}         & \begin{tabular}[c]{@{}l@{}}Developed in\\ EMS sprints\end{tabular} & 0.3     \\
+5    & \begin{tabular}[c]{@{}l@{}}Server\\ control(Server\\ \\ Metric Exporter)\end{tabular}    & \begin{tabular}[c]{@{}l@{}}Developed in\\ EMS sprints\end{tabular} & 0.2     \\
+6    & Graylog                                                                                  & Open Source                                                        & 2.4     \\
+7    & Elasticsearch                                                                            & Open Source                                                        & 5.6.12  \\
+8    & Mongo DB                                                                                 & Open Source                                                        & 3      
+\end{tabular}
+\end{table}
 
 Prometheus is an open source time series database used for telemetry
 along with Alertmanager for effective management and handling of alert
