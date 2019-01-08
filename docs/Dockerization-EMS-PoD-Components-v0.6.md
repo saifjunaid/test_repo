@@ -183,37 +183,21 @@ collection. The services are realized through open source components and
 components developed as part of EMS sprints. The details are captured in
 the following table.
 
-[]{#_Toc534058041 .anchor}Table 1: Microservices Container Versions
+Table 1: Microservices Container Versions
 
-+-----------------+-----------------+-----------------+-----------------+
-| **S.NO**        | **Microservices | **Type**        | **Version**     |
-|                 | **              |                 |                 |
-+=================+=================+=================+=================+
-| 1               | Prometheus      | Open Source     | 2.5.0           |
-+-----------------+-----------------+-----------------+-----------------+
-| 2               | Alertmanager    | Open Source     | 0.15.3          |
-+-----------------+-----------------+-----------------+-----------------+
-| 3               | rtb-prometheus- | Developed in    | 0.1.1           |
-|                 | graylog         | EMS sprints     |                 |
-|                 |                 |                 |                 |
-|                 | (Graylog        |                 |                 |
-|                 | Webhook)        |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 4               | Olt-control     | Developed in    | 0.3             |
-|                 | (OLT Metric     | EMS sprints     |                 |
-|                 | Exporter)       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 5               | Server          | Developed in    | 0.2             |
-|                 | control(Server  | EMS sprints     |                 |
-|                 | Metric          |                 |                 |
-|                 | Exporter)       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| 6               | Graylog         | Open Source     | 2.4             |
-+-----------------+-----------------+-----------------+-----------------+
-| 7               | Elasticsearch   | Open Source     | 5.6.12          |
-+-----------------+-----------------+-----------------+-----------------+
-| 8               | Mongo DB        | Open Source     | 3               |
-+-----------------+-----------------+-----------------+-----------------+
+	\begin{table}[]
+	\begin{tabular}{llll}
+	1                 & Prometheus                             & Open Source              & 2.5.0  \\
+	2                 & Alertmanager                           & Open Source              & 0.15.3 \\
+	3                 & rtb-prometheus-graylog                 &                          &        \\
+	(Graylog Webhook) & Developed in EMS sprints               & 0.1.1                    &        \\
+	4                 & Olt-control (OLT Metric Exporter)      & Developed in EMS sprints & 0.3    \\
+	5                 & Server control(Server Metric Exporter) & Developed in EMS sprints & 0.2    \\
+	6                 & Graylog                                & Open Source              & 2.4    \\
+	7                 & Elasticsearch                          & Open Source              & 5.6.12 \\
+	8                 & Mongo DB                               & Open Source              & 3     
+	\end{tabular}
+	\end{table}
 
 Prometheus is an open source time series database used for telemetry
 along with Alertmanager for effective management and handling of alert
@@ -228,31 +212,37 @@ containers are here by referred as micro service /service.
 Following table provides the host machine details where the docker
 daemon runs along with all the containers.
 
-[]{#_Toc531798221 .anchor}Table 2: Host Machine System details
+Table 2: Host Machine System details
 
-  S. No   Host Machine       Version
-  ------- ------------------ --------------------------------
-  1       System OS Ubuntu   16.04.X
-  2       Docker             18.09.0, build 4d60db4
-  3       Docker-compose     version 1.23.1, build b02f1306
+	\begin{table}[]
+	\begin{tabular}{lll}
+	S. No & Host Machine     & Version                        \\
+	1     & System OS Ubuntu & 16.04.X                        \\
+	2     & Docker           & 18.09.0, build 4d60db4         \\
+	3     & Docker-compose   & version 1.23.1, build b02f1306
+	\end{tabular}
+	\end{table}
 
 Container Names {#container-names .Title}
 ===============
 
 Following are the container names of the micro services.
 
-[]{#_Toc534058043 .anchor}Table 3: Service and Container Names
+ Table 3: Service and Container Names
 
-  **Services Name**                  **Container Name**
-  ---------------------------------- ------------------------
-  Prometheus                         Prometheus
-  Alertmanager                       Alertmanager
-  rtb-prometheus-graylog (webhook)   rtb-prometheus-graylog
-  olt-control                        olt-control
-  server-control                     server-control
-  graylog                            Graylog
-  mongo                              graylog-mongo
-  elasticsearch                      graylog-elasticsearch
+	\begin{table}[]
+	\begin{tabular}{ll}
+	Services Name                     & Container Name         \\
+	Prometheus                        & Prometheus             \\
+	Alertmanager                      & Alertmanager           \\
+	rtb-prometheus-graylog  (webhook) & rtb-prometheus-graylog \\
+	olt-control                       & olt-control            \\
+	server-control                    & server-control         \\
+	graylog                           & Graylog                \\
+	mongo                             & graylog-mongo          \\
+	elasticsearch                     & graylog-elasticsearch 
+	\end{tabular}
+	\end{table}
 
 Service names can be used across containers for inter container
 communication. Docker will resolve the service name to the container
@@ -283,29 +273,21 @@ from the host machine.
 
 The mapping is described in the following table.
 
-[]{#_Toc534058044 .anchor}Table 4: Container to Host Ports Mapping
+Table 4: Container to Host Ports Mapping
 
-+------------------------+--------------------+---------------+
-| **Container Name**     | **Container Port** | **Host Port** |
-+========================+====================+===============+
-| prometheus             | 9090               | 9090          |
-+------------------------+--------------------+---------------+
-| alertmanager           | 9093               | 9093          |
-+------------------------+--------------------+---------------+
-| rtb-prometheus-graylog | 8080               | 9099          |
-|                        |                    |               |
-| (Graylog Webhook)      |                    |               |
-+------------------------+--------------------+---------------+
-| olt-control            | 9001               | 9001          |
-+------------------------+--------------------+---------------+
-| server control         | 9002               | 9002          |
-+------------------------+--------------------+---------------+
-| graylog                | 9000               | 9080          |
-+------------------------+--------------------+---------------+
-| elasticsearch          | 9200               | 9200          |
-+------------------------+--------------------+---------------+
-| mongo                  | 27017              | ***-***       |
-+------------------------+--------------------+---------------+
+	\begin{table}[]
+	\begin{tabular}{lll}
+	Container Name                          & Container Port & Host Port \\
+	prometheus                              & 9090           & 9090      \\
+	alertmanager                            & 9093           & 9093      \\
+	rtb-prometheus-graylog(Graylog Webhook) & 8080           & 9099      \\
+	olt-control                             & 9001           & 9001      \\
+	server control                          & 9002           & 9002      \\
+	graylog                                 & 9000           & 9080      \\
+	elasticsearch                           & 9200           & 9200      \\
+	mongo                                   & 27017          & -        
+	\end{tabular}
+	\end{table}
 
 Bindmount - Configuration files and Folders
 ===========================================
@@ -317,14 +299,17 @@ of the configuration files, these folders are Bindmount to specific
 folders inside the containers. The local configuration folders on the
 host machine for each container is as below.
 
-[]{#_Toc534058045 .anchor}Table 5: Container Bindmounts
+Table 5: Container Bindmounts
 
-  **Container Name**                         **Host Bindmount folder/file**          **Path Inside the Container**
-  ------------------------------------------ --------------------------------------- -----------------------------------------------------
-  prometheus                                 "./prometheus-config/prometheus.yml"    /etc/prometheus/prometheus.yml
-  prometheus                                 "./prometheus-config/pod971.rules"      /etc/prometheus/pod971.rules
-  Alertmanager                               "./alertmanager-config/config.yml"      /etc/alertmanager/config.yml
-  rtb-prometheus-graylog (Graylog Webhook)   "./rtb-prometheus-graylog-config/etc"   /opt/rtbrick/node/rtb-prometheus-graylog-config/etc
+	\begin{table}[]
+	\begin{tabular}{lll}
+	Container Name                           & Host Bindmount folder/file            & Path Inside the Container                           \\
+	prometheus                               & “./prometheus-config/prometheus.yml”  & /etc/prometheus/prometheus.yml                      \\
+	prometheus                               & “./prometheus-config/pod971.rules”    & /etc/prometheus/pod971.rules                        \\
+	Alertmanager                             & “./alertmanager-config/config.yml”    & /etc/alertmanager/config.yml                        \\
+	rtb-prometheus-graylog (Graylog Webhook) & “./rtb-prometheus-graylog-config/etc” & /opt/rtbrick/node/rtb-prometheus-graylog-config/etc
+	\end{tabular}
+	\end{table}
 
 Volume Mounts for Container Storage
 ===================================
@@ -337,15 +322,18 @@ storing their time series and log data. Also, Alertmanager generates a
 lot of data for notifications which needs to be stored on the host
 machine.
 
-[]{#_Toc534058046 .anchor}Table 6: Container Volume Mounts
+Table 6: Container Volume Mounts
 
-  **Container Name**   **Volume Mount**   **Mount Point Inside Container**
-  -------------------- ------------------ ----------------------------------
-  prometheus           prometheus\_data   /prometheus
-  alertmanager         alertmanager       /alertmanager
-  graylog              graylog\_journal   /usr/share/graylog/data/journal
-  graylog-elastic      graylog-elastic    /usr/share/elasticsearch/data
-  graylog-mongo        graylog-mongo      /data/db
+	\begin{table}[]
+	\begin{tabular}{lll}
+	Container Name  & Volume Mount     & Mount Point Inside Container    \\
+	prometheus      & prometheus\_data & /prometheus                     \\
+	alertmanager    & alertmanager     & /alertmanager                   \\
+	graylog         & graylog\_journal & /usr/share/graylog/data/journal \\
+	graylog-elastic & graylog-elastic  & /usr/share/elasticsearch/data   \\
+	graylog-mongo   & graylog-mongo    & /data/db                       
+	\end{tabular}
+	\end{table}
 
 Volume mount folders are mapped to specific directories which the micro
 service application can use it as storage inside the container. The data
@@ -380,7 +368,7 @@ order.
 
 Following block diagram shows the container booting order.
 
-[]{#_Toc534058040 .anchor}Figure 2: Docker Container Booting Order
+Figure 2: Docker Container Booting Order
 
 ![](./media/image3.png)
 
@@ -1611,3 +1599,4 @@ pod-config/
 └── server\_config.json
 
 7 directories, 15 files
+
