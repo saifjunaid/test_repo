@@ -361,14 +361,10 @@ Manage Docker as non-root user
 ==============================
 
 Create docker group
-<span style="background-color:powderblue;">
 \$ sudo groupadd docker -f
-</span>
 Add your user to the docker group
 
-<span style="background-color:powderblue;">
 \$ sudo usermod -aG docker \$USER
-</span>
 Log out and log back in so that your group membership is re-evaluated,
 and then you should be able to issue docker commands as non-root user.
 
