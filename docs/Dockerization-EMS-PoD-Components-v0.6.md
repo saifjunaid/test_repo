@@ -377,8 +377,11 @@ Run following command to install docker-compose.
 \"https://github.com/docker/compose/releases/download/1.23.1/docker-compose-\$(uname
 -s)-\$(uname -m)\" -o /usr/local/bin/docker-compose
 
+<span style="background-color:powderblue;">
+
 \$ sudo chmod +x /usr/local/bin/docker-compose
 
+</span>
 \$ docker-compose \--version
 
 docker-compose version 1.23.1, build b02f1306
